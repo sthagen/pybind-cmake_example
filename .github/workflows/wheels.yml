@@ -43,7 +43,7 @@ jobs:
       with:
         submodules: true
 
-    - uses: pypa/cibuildwheel@v2.11.2
+    - uses: pypa/cibuildwheel@v2.11.3
       env:
         CIBW_ARCHS_MACOS: auto universal2
 
@@ -73,6 +73,6 @@ jobs:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.6.1
+    - uses: pypa/gh-action-pypi-publish@v1.6.4
       with:
         password: ${{ secrets.pypi_password }}
